@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        body{
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <div style="border: 5px solid brown;font-size: 55px; font-weight: bold;font-style: normal;text-align: center;">會員系統首頁& CRUD 應用(MONGODB)</div>
+    <h3>會員登入(內有U功能)</h3>
+    <form action="/signin", method="post">
+        信箱<input type="text", name="email">
+        密碼<input type="password", name="password">
+        <button>登入</button>
+    </form>
+
+    <h3>查詢使用者資料(R)</h3>
+    <div style="font-weight: bolder;font-size: 20px;color:white;">請提供信箱</div>
+    <form action="/userdata", method="post">
+        信箱<input type="text", name="email">
+        <button>查詢</button>
+    </form>
+
+
+    <h3>註冊系統(C)</h3>
+    <form action="/signup" method="post">
+    <button>還沒帳號嗎?來此註冊</button>
+    </form>
+
+    <h3>刪除會員系統(D)</h3>
+    <form action="/delaccount" method="post">
+    <button>想刪帳號走這邊</button>
+    </form>
+    <br>
+    <div style="border: 5px solid brown;font-size: 55px; font-weight: bold;font-style: normal;text-align: center;">股票抓取(施工中...</div>
+    <br>
+    
+
+</body>
+</html>
