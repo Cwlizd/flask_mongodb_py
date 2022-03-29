@@ -1,9 +1,6 @@
 # 初始化資料庫連線
 from flask import Flask, render_template, request, redirect, session, template_rendered
-from matplotlib.font_manager import json_load
 import requests
-import numpy as np
-import pandas as pd
 import pymongo
 client = pymongo.MongoClient(
     "mongodb+srv://cwlizd:qQ1122@mycluster1.hvmmb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
