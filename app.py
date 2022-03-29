@@ -1,6 +1,5 @@
 # 初始化資料庫連線
 from flask import Flask, render_template, request, redirect, session, template_rendered
-import requests
 import pymongo
 client = pymongo.MongoClient(
     "mongodb+srv://cwlizd:qQ1122@mycluster1.hvmmb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
@@ -171,8 +170,6 @@ def signout():
     # 移除session
     del session["nickname"]
     return redirect("/")
-
-
 
 
 app.run(port=3000)
